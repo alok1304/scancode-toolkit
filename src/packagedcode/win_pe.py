@@ -107,7 +107,7 @@ PE_INFO_KEYS = (
     'Full Version',  # rare and used only by Java exe
     'ProductVersion',  # the actual version
     'FileVersion',  # another common version
-    'Assembly Version',  # a version common in MSFT, redundant when present with ProductVersion
+    'AssemblyVersion',  # a version common in MSFT, redundant when present with ProductVersion
 
     'BuildDate',  # rare but useful when there 2013/02/04-18:07:46 2018-11-10 14:38
 
@@ -284,7 +284,7 @@ class WindowsExecutableHandler(models.NonAssemblableDatafileHandler):
             'Full Version',
             'ProductVersion',
             'FileVersion',
-            'Assembly Version',
+            'AssemblyVersion',
         )
         release_date = get_first(infos, 'BuildDate')
         if release_date:
